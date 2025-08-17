@@ -1,12 +1,11 @@
 document.getElementById('gift-button').addEventListener('click', function() {
     document.getElementById('landing-page').classList.add('hidden');
-    document.getElementById('romantic-page').classList.remove('hidden');
-    // Mulai animasi setelah transisi
+    document.getElementById('romantic-page').classList.remove('hidden')
     setTimeout(() => {
         addClaps();
         addHearts();
         setInterval(addClaps, 400);
-        setInterval(addHearts, 600); // Hati muncul lebih lambat untuk variasi
+        setInterval(addHearts, 600); 
     }, 100);
 });
 
@@ -31,7 +30,7 @@ function addClaps() {
 
 function addHearts() {
     const container = document.getElementById('heart-container');
-    const heartCount = 4; // Jumlah hati per siklus
+    const heartCount = 4; 
 
     for (let i = 0; i < heartCount; i++) {
         const heart = document.createElement('div');
@@ -44,11 +43,8 @@ function addHearts() {
         container.appendChild(heart);
         setTimeout(() => {
             heart.remove();
-        }, 3000); // Durasi lebih lama untuk animasi float
+        }, 3000);
     }
 }
-
-// Tambahkan tepuk tangan dan hati saat halaman romantis dimuat (opsional preload)
 window.onload = function() {
-    // Kosong, karena animasi dimulai setelah klik
 };
