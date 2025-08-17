@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #c3a6ff);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.landing h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.landing p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#gift-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#gift-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.romantic h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.clap, .heart {
+    position: absolute;
+    font-size: 2.5em;
+    animation: fade 2s ease-in-out;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.heart {
+    font-size: 2em;
+    animation: float 3s ease-in-out;
+    color: #ff69b4; /* Warna hati romantis */
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-100px) rotate(10deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-150px) rotate(15deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .landing h1, .romantic h1 {
+        font-size: 1.8em;
+        padding: 15px;
+    }
+    .clap, .heart {
+        font-size: 1.8em;
+    }
+}
