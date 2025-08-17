@@ -71,7 +71,7 @@ body {
 .heart {
     font-size: 2em;
     animation: float 3s ease-in-out;
-    color: #ff69b4; /* Warna hati romantis */
+    color: #ff69b4;
 }
 
 @keyframes fade {
